@@ -1,0 +1,173 @@
+
+  <html>
+    <head>
+      <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+          <title>Page Title</title>
+          <meta name='viewport' content='width=device-width, initial-scale=1'>
+            <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+              <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+                <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+                  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+                  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+                    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+                    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+                    <script src='main.js'></script>
+</head>
+                  <body>
+                    <div class="container">
+                      <h1 class="text-center">Grow with a loan from your community</h1>
+                      <div class="price-box">
+
+                        <div class="row">
+                          <div class="col-sm-6">
+
+                            <div class="price-slider">
+                              <h4 class="great">How much do you need to make your project a reality?</h4>
+
+                              <div class="col-sm-12">
+                                <div id="slider_amirol"></div>
+
+                              </div>
+                              <div class="col-sm-12 mat-top-20">
+                                <span class="pull-left">$10,000</span>
+
+                                <span class="pull-right">$100,000</span>
+                              </div>
+                            </div>
+                            <div class="price-slider">
+                              <h4 class="great">What loan term makes sense for you?</h4>
+                              <div class="btn-group btn-group-justified">
+                                <div className="btn-group btn-group-justified">
+                                  <select class="form-control loan_term" name="loan_term"
+                                    value=''
+                                  >
+                                    <option value="12">12 (popular)</option>
+                                    <option value="18">18 (popular)</option>
+                                    <option value="24">24 (popular)</option>
+                                    <option value="30">30 (popular)</option>
+                                    <option value="36">36 (popular)</option>
+                                    <option value="42">42 (popular)</option>
+                                    <option value="48">48 (popular)</option>
+                                    <option value="54">54 (popular)</option>
+                                    <option value="60">60 (popular)</option>
+                                  </select>
+
+                                </div>
+
+                              </div>
+                            </div>
+                            <div class="price-slider ">
+                              <h4 class="great">Fixed Interest Rate</h4>
+
+                              <input name="sliderVal" type="hidden" id="sliderVal" value='0' readonly="readonly" />
+
+                              <input name="term" type="hidden" class="term1" value='' readonly="readonly" />
+                              <div class="btn-group btn-group-justified">
+                                <div class="add-num">
+
+                                  <input type="number" min="6" max="14" class="form-control loan_rate" name="loan_rate" onkeydown="return false" >
+                        </div>
+                                  <span class="font-24">%</span>
+                                  <div class="col-sm-12 fixed-int">
+                                    <div id="slider_amirol1"></div>
+
+                                  </div>
+                                  <div class="col-sm-12 mat-top-20">
+                                    <span class="pull-left">6%</span>
+
+                                    <span class="pull-right">14%</span>
+                                  </div>
+
+                                </div>
+                                <div class="form-group">
+                                  <div class="col-sm-12">
+                                    <button type="button" class="btn btn-black btn-lg btn-block calcualtePriceAmt">CALCULATE <span class="glyphicon glyphicon-chevron-right"></span></button>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="price-form">
+
+                                <div className="form-group">
+
+                                  <div class="col-md-12 payDiv">
+                                    <div class="card">
+
+                                      <span class="text-center"><h1 class="finalEmi"></h1><h5 class="text-center">paid monthly to your community! </h5></span>
+
+                                    </div>
+                                  </div>
+
+                                </div>
+
+                                <hr className="style" />
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <label for="amount_amirol" class="control-label">Principal: </label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <input class="price lead loanAmt " name="loanAmt" type="text" disabled="disabled" style="" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <label for="amount_amirol" class="control-label">Interest: </label>
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <input class="price lead total_interest_pay_text" name="total_interest_pay_text" type="text" disabled="disabled" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <label for="amount_amirol" class="control-label">One-time posting fee: </label>
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <input class="price lead fee" name="fee" type="text" disabled="disabled" style="" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <label for="amount_amirol" class="control-label">One-time success fee: </label>
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <input class="price lead servise" name="servise" type="text" disabled="disabled" style="" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <label for="amount_amirol" class="control-label">Total: </label>
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <input class="price lead total_amt" name="total_amt" type="text" disabled="disabled" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div style="margin-top:30px"></div>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+      
+</body>
+</html>
