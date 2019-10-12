@@ -8,12 +8,15 @@
             <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
               <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
                 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.css" integrity="sha256-jJApoDvazb6sRGbc3gE+wdEAE0cE0H1Ag3k1qCada9c=" crossorigin="anonymous" />
 
                   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
                   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
                     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
                     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
                     <script src='main.js'></script>
+                   
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js" integrity="sha256-vFhEtGnaQ2xB+yjBTSXxssthNcfdbzu+lmLYhCdp2Cc=" crossorigin="anonymous"></script>
 </head>
                   <body>
                     <div class="container">
@@ -25,11 +28,21 @@
 
                             <div class="price-slider">
                               <h4 class="great">How much do you need to make your project a reality?</h4>
+                              <h5 class="slidervalue text-center"></h3>
+                              <div class="col-sm-12 slidecontainer">
+                                  <input
+                                  type="range"
+                                  class="sliderVal slider"
+                                  min="10000"                   
+                                  max="100000"                  
+                                  step="1000"                  
+                                  value="10000" 
+                                                  
+                                  data-orientation="vertical" 
+                              >
+                                </div>
 
-                              <div class="col-sm-12">
-                                <div id="slider_amirol"></div>
-
-                              </div>
+                            
                               <div class="col-sm-12 mat-top-20">
                                 <span class="pull-left">$10,000</span>
 
@@ -60,20 +73,26 @@
                             </div>
                             <div class="price-slider ">
                               <h4 class="great">Fixed Interest Rate</h4>
-
-                              <input name="sliderVal" type="hidden" id="sliderVal" value='0' readonly="readonly" />
-
                               <input name="term" type="hidden" class="term1" value='' readonly="readonly" />
                               <div class="btn-group btn-group-justified">
                                 <div class="add-num">
 
-                                  <input type="number" min="6" max="14" class="form-control loan_rate" name="loan_rate" onkeydown="return false" >
+                                  <input type="number" min="6" max="14" value="6" class="form-control loan_rate" name="loan_rate" >
                         </div>
                                   <span class="font-24">%</span>
-                                  <div class="col-sm-12 fixed-int">
-                                    <div id="slider_amirol1"></div>
-
-                                  </div>
+                                
+                                
+                                  <div class="col-sm-12 slidecontainer">
+                                      <input
+                                      type="range"
+                                      class="loan_rate1 slider"
+                                      min="6"                   
+                                      max="14"                  
+                                      step="1"                  
+                                      value="6"                 
+                                      data-orientation="vertical" 
+                                  >
+                                    </div>
                                   <div class="col-sm-12 mat-top-20">
                                     <span class="pull-left">6%</span>
 
