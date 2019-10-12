@@ -2,6 +2,7 @@ $(document).ready(function() {
 $(".finalEmi").text("$"+0);
 $('.term1').val(0);
 $('.slidervalue').text(numberWithCommas("$"+10000));
+$(".calcualtePriceAmt").attr("disabled", false);
 
 $(".calcualtePriceAmt").click(function(){
  calcualtePrice()
@@ -9,11 +10,18 @@ $(".calcualtePriceAmt").click(function(){
 $('.loan_rate').on('input',function(event) {
 
 var rate_val=$('.loan_rate').val();
+if(rate_val<6 || rate_val=="" || rate_val>14){
+    $(".calcualtePriceAmt").attr("disabled", true);
+}else{
+    $(".calcualtePriceAmt").attr("disabled", false);
+}
+console.log('rate_val', rate_val);
  $('.loan_rate1').val(rate_val);
 
 });
 $('.loan_rate1').on('input',function(event) {
     var rate_val=$('.loan_rate1').val();
+   
      $('.loan_rate').val(rate_val);
     
     });
@@ -33,6 +41,7 @@ function calcualtePrice(val){
     var sliderVal =$('.sliderVal').val();
 var term =$('.loan_term').val();
 var rate =$('.loan_rate1').val();
+console.log('xxxxxxxx',rate);
 var fee=250;
 const r = rate / 12 / 100;
 const P = sliderVal
